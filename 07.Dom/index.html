@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>Dom introduction demo</h1>
+    <ul>
+        <li>Dom properties exemple</li>
+        <li>Dom methods exemple Dom</li>
+        <button onclick="edit()">edit element</button>
+    </ul>
+    <script>
+        function edit(reference, match, replace) {
+            let result = reference.textContent
+
+            const pattern = new RegExp(match, 'g')
+            let newResult = result.replace(pattern, replace)
+            reference.textContent = newResult;
+        }
+    </script>
+</body>
+
+</html>
